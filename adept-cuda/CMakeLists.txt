@@ -38,12 +38,12 @@ endif()
 
 add_custom_target(
     regression_tests ALL
-    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/regression_test
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_SOURCE_DIR}/regression_test/* ${CMAKE_BINARY_DIR}/regression_test
+#    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/regression_test
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_SOURCE_DIR}/quick_regression_test.sh ${CMAKE_BINARY_DIR}/
 )
 
-add_custom_target(
-    test-data ALL
-    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/test-data
-    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_SOURCE_DIR}/test-data/* ${CMAKE_BINARY_DIR}/test-data
-)
+#add_custom_target(
+#    test-data ALL
+#    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/test-data
+#    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${CMAKE_CURRENT_SOURCE_DIR}/test-data/* ${CMAKE_BINARY_DIR}/test-data
+#)
